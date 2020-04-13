@@ -20,6 +20,7 @@ public class Colocviul_13MainActivity extends AppCompatActivity {
     private class GenericButtonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
+            textView.setAlpha(1);
             textView.setText(textView.getText().toString() + ((Button)view).getText().toString() + ", ");
         }
     }
@@ -29,10 +30,18 @@ public class Colocviul_13MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colocviul_13_main);
 
-        north_button = (Button)findViewById(R.id.north_button);
-        west_button = (Button)findViewById(R.id.west_button);
-        east_button = (Button)findViewById(R.id.east_button);
-        south_button = (Button)findViewById(R.id.south_button);
+        textView = (TextView)findViewById(R.id.text_view);
 
+        north_button = (Button)findViewById(R.id.north_button);
+        north_button.setOnClickListener(genericButtonClickListener);
+
+        west_button = (Button)findViewById(R.id.west_button);
+        west_button.setOnClickListener(genericButtonClickListener);
+
+        east_button = (Button)findViewById(R.id.east_button);
+        east_button.setOnClickListener(genericButtonClickListener);
+
+        south_button = (Button)findViewById(R.id.south_button);
+        south_button.setOnClickListener(genericButtonClickListener);
     }
 }
