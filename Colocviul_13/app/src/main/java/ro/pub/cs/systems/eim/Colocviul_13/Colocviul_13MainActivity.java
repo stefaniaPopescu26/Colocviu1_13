@@ -70,7 +70,7 @@ public class Colocviul_13MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         countButtons = 0;
 
-        if(savedInstanceState.getString("count") != null ) {
+        if(savedInstanceState.getInt("count") != 0 ) {
            countButtons = savedInstanceState.getInt("count");
         }
     }
