@@ -62,7 +62,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:alpha="0"></TextView>
+        android:alpha="0"
+        ></TextView>
 
     <Button
         android:id="@+id/navigate_button"
